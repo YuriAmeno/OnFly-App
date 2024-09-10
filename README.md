@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# YoAY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interface developed to simulate a sales ERP, I am currently building it using React with Typescript along with PHP and Laravel and I plan to increase the use of Docker.
 
 ## Available Scripts
 
