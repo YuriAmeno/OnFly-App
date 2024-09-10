@@ -2,8 +2,8 @@ import { useFormik } from 'formik';
 import { initial_values, loginSchema } from 'schemaFormik';
 
 export default function LoginApp() {
-  const [loading, setLoading] = useState(false);
-  const { saveAuth, setCurrentUser } = useAuth();
+  // const [loading, setLoading] = useState(false);
+  // const { saveAuth, setCurrentUser } = useAuth();
   // const rota = useNavigate()
 
   const formik = useFormik({
