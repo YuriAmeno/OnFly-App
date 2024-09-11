@@ -1,5 +1,15 @@
-import { AppRoutes } from 'routes/AppRoutes';
+import { AuthInit } from 'Contexts';
+import LoginApp from 'pages/auth/Login';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { PrivateRoutes, PublicRoutes } from 'routes';
 
 export default function App() {
-  return <AppRoutes />;
+  return (
+    <Suspense fallback={<LoginApp />}>
+      <AuthInit>
+        <Outlet />
+      </AuthInit>
+    </Suspense>
+  );
 }
