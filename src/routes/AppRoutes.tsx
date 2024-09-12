@@ -3,8 +3,7 @@ import { useAuth } from 'Contexts';
 import { FC } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { PrivateRoutes } from 'routes/Private.Routes';
-import LoginApp from './../pages/auth/Login';
-import RegisterApp from 'pages/auth/Register';
+import { AuthPage } from 'routes/AuthPage';
 const { PUBLIC_URL } = process.env;
 
 const AppRoutes: FC = () => {
@@ -13,7 +12,7 @@ const AppRoutes: FC = () => {
     <BrowserRouter basename={PUBLIC_URL}>
       <Routes>
         <Route element={<App />}>
-          {/* <Route path="logout" element={<Logout />} /> */}
+          {/* <Route path="/logout" {<Logout/>} /> */}
           {currentUser ? (
             <>
               <Route path="/*" element={<PrivateRoutes />} />
@@ -21,8 +20,8 @@ const AppRoutes: FC = () => {
             </>
           ) : (
             <>
-              <Route path="auth" element={<LoginApp />} />
-              <Route path="register" element={<RegisterApp />} />
+              <Route path="auth/*" element={<AuthPage />} />
+              <Route path="*" element={<Navigate to="/auth" />} />
             </>
           )}
         </Route>

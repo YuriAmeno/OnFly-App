@@ -6,6 +6,7 @@ export const PrivateRoutes = () => {
   return (
     <Routes>
       <Route path="/dashboard" element={<DashboardApp />} />
+      <Route path="auth/*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
 };

@@ -77,8 +77,6 @@ const AuthInit: FC<PropsWithChildren> = ({ children }) => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(showLogin);
-
   return showLogin ? <DashboardApp /> : <>{children}</>;
 };
 
