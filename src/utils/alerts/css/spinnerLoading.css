@@ -1,0 +1,12 @@
+.custom-swal-bg {
+  background-color: #f1416c !important;
+}
+
+.custom-swal-title {
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-loader) {
+  border-color: #ffffff rgba(0, 0, 0, 0) #ffffff rgba(0, 0, 0, 0) !important; /* Cor do spinner */
+}
