@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { PrivateRoutes } from 'routes/Private.Routes';
 import { AuthPage } from 'routes/AuthPage';
+import { Logout } from 'pages';
 const { PUBLIC_URL } = process.env;
 
 const AppRoutes: FC = () => {
@@ -12,7 +13,7 @@ const AppRoutes: FC = () => {
     <BrowserRouter basename={PUBLIC_URL}>
       <Routes>
         <Route element={<App />}>
-          {/* <Route path="/logout" {<Logout/>} /> */}
+          <Route path="/logout" element={<Logout />} />
           {currentUser ? (
             <>
               <Route path="/*" element={<PrivateRoutes />} />

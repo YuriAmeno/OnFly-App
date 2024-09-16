@@ -35,7 +35,7 @@ export default function LoginApp() {
   const handleSucces = (msg: string | any, auth: any, userByToken: IUser_Auth | undefined) => {
     setIsLoading(false);
     setIsLoadingError(false);
-    setIsLoadingError(true);
+    setIsLoadingSuccess(true);
     setMsg(msg);
     saveAuth(auth.data);
     setCurrentUser(userByToken);
