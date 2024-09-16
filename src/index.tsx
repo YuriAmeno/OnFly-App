@@ -4,7 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { AlertProvider, AuthProvider } from 'Contexts';
 import { AppRoutes } from 'routes';
+import { setupAxios } from 'helpers';
+import axios from 'axios';
 
+setupAxios(axios);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>

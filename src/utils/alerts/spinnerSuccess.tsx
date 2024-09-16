@@ -20,11 +20,7 @@ export const SuccessSpinner = ({ title, text }: ISawLoadingSpinner) => {
         title: 'custom-swal-title',
         loader: 'custom-swal-loading',
       },
-      didOpen: () => {
-        Swal.showLoading();
-      },
     });
-
     return () => {
       Swal.close();
     };

@@ -6,7 +6,7 @@ const AuthPage = () => (
   <Routes>
     <Route>
       <Route path="login" element={<LoginApp />} />
-      <Route path="registration" element={<RegisterApp />} />
+      <Route path="register" element={<RegisterApp />} />
       <Route index element={<LoginApp />} />
     </Route>
   </Routes>
